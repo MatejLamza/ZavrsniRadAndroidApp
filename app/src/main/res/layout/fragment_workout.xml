@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/workout_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/workout_banner"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+
+        <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:src="@drawable/icon_calendar"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="11sp"
+                            android:text="Frequency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <TextView
+                        android:textSize="15sp"
+                        android:text="5 days a week"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <!-- DURATION -->
+
+            <LinearLayout
+                    android:layout_marginLeft="50dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:src="@drawable/stopwatch"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="11sp"
+                            android:text="Duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <TextView
+                        android:textSize="15sp"
+                        android:text="1 Hour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <!-- GOAL -->
+            <LinearLayout
+                    android:layout_marginLeft="50dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:src="@drawable/trophy"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="11sp"
+                            android:text="Goal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <TextView
+                        android:textSize="15sp"
+                        android:text="Fatloss"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_workouts"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_AddWorkout"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/ic_baseline_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

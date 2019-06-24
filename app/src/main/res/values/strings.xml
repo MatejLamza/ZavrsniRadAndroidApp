@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FitnessTrackerFinal</string>
+    <string name="Login">Login</string>
+    <string name="login_email">E-mail</string>
+    <string name="login_password">Password</string>
+    <string name="tv_Register">Register</string>
+
+    <string-array name="gender_dropdown">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string-array name="workout_goal_dropdown">
+        <item>Fat Loss</item>
+        <item>Muscle Building</item>
+        <item>Gain Strength</item>
+    </string-array>
+</resources>

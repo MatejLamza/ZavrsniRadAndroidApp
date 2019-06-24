@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_login_container">40dp</dimen>
+    <dimen name="marginTop_login_container">100dp</dimen>
+    <dimen name="login_textview_size">15sp</dimen>
+    <dimen name="login_edittext_padding">15dp</dimen>
+</resources>

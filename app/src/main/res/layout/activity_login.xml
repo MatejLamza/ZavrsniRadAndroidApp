@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <VideoView
+            android:id="@+id/vv_bg_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+    />
+
+    <RelativeLayout
+            android:layout_marginRight="@dimen/margin_login_container"
+            android:layout_marginLeft="@dimen/margin_login_container"
+            android:layout_marginTop="@dimen/marginTop_login_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tv_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Login"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp"/>
+
+        <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_below="@id/tv_Login"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_email"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/login_textview_size"
+                        android:textColor="@color/white"/>
+
+                <EditText
+                        android:id="@+id/login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="email"
+                        android:textColor="@color/white"
+                        android:background="@drawable/shape_textbox"
+                        android:textSize="@dimen/login_textview_size"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="@dimen/login_edittext_padding"
+                        android:paddingRight="@dimen/login_edittext_padding"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_password"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/login_textview_size"
+                        android:textColor="@color/white" tools:ignore="HardcodedText"/>
+
+                <EditText
+                        android:id="@+id/login_password"
+                        android:inputType="textPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_textbox"
+                        android:textSize="@dimen/login_textview_size"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="@dimen/login_edittext_padding"
+                        android:paddingRight="@dimen/login_edittext_padding"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:id="@+id/layout2"
+                android:layout_below="@id/layout1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <Button
+                    android:background="@drawable/shape_button"
+                    android:id="@+id/btn_Login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login now"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:paddingRight="70dp"
+                    android:paddingLeft="70dp"
+                    android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/btn_SignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up now"
+                android:background="@color/transparent"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        <Button
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot password"
+                android:background="@color/transparent"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

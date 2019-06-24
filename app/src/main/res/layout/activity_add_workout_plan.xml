@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/register_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:id="@id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/create_workout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create a workout"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:layout_marginBottom="30dp"/>
+
+                <LinearLayout
+                        android:layout_marginLeft="40dp"
+                        android:id="@+id/layout1"
+                        android:layout_below="@id/create_workout"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Workout Plan Name"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/login_textview_size"
+                                android:textColor="@color/white"/>
+
+                        <EditText
+                                android:id="@+id/et_workout_name"
+                                android:layout_width="match_parent"
+                                android:inputType="text"
+                                android:layout_height="40dp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/shape_textbox"
+                                android:textSize="@dimen/login_textview_size"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="@dimen/login_edittext_padding"
+                                android:paddingRight="@dimen/login_edittext_padding"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Goal"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/login_textview_size"
+                                android:textColor="@color/white"/>
+
+                        <Spinner
+                                android:id="@+id/spinner_goal"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:entries="@array/workout_goal_dropdown"
+                                android:background="@drawable/shape_textbox"
+                                android:textSize="@dimen/login_textview_size"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="@dimen/login_edittext_padding"
+                                android:paddingRight="@dimen/login_edittext_padding">
+
+                        </Spinner>
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="starting date"-->
+                                <!--android:textAllCaps="true"-->
+                                <!--android:textSize="@dimen/login_textview_size"-->
+                                <!--android:textColor="@color/white"/>-->
+
+                        <!--<DatePicker-->
+                                <!--android:id="@+id/date_workout_start"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="440dp"-->
+                                <!--android:textSize="@dimen/login_textview_size"-->
+                                <!--android:textColor="@color/white"-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:paddingLeft="@dimen/login_edittext_padding"-->
+                                <!--android:paddingRight="@dimen/login_edittext_padding"/>-->
+
+
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Number of workouts a week"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/login_textview_size"
+                                android:textColor="@color/white"/>
+
+                        <EditText
+                                android:id="@+id/et_num_workouts"
+                                android:layout_width="match_parent"
+                                android:inputType="number"
+                                android:layout_height="40dp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/shape_textbox"
+                                android:textSize="@dimen/login_textview_size"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="@dimen/login_edittext_padding"
+                                android:paddingRight="@dimen/login_edittext_padding"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Average workout duration"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/login_textview_size"
+                                android:textColor="@color/white"/>
+
+                        <EditText
+                                android:id="@+id/et_avg_workout_duration"
+                                android:layout_width="match_parent"
+                                android:inputType="number"
+                                android:layout_height="40dp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/shape_textbox"
+                                android:textSize="@dimen/login_textview_size"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="@dimen/login_edittext_padding"
+                                android:paddingRight="@dimen/login_edittext_padding"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/layout2"
+                    android:layout_below="@id/layout1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:background="@drawable/shape_button"
+                        android:id="@+id/btn_Create_Workout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Finish"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:paddingRight="70dp"
+                        android:paddingLeft="70dp"
+                        android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
