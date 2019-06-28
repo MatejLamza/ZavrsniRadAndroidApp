@@ -16,7 +16,7 @@ class AddWorkoutPlanAdapter: RecyclerView.Adapter<AddWorkoutPlanViewHolder>() {
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): AddWorkoutPlanViewHolder
-            = AddWorkoutPlanViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.item_workout_plan,p0,false))
+            = AddWorkoutPlanViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.item_workout_plan_second,p0,false))
 
     override fun getItemCount(): Int = workoutPlans.size
 

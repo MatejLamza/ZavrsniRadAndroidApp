@@ -14,6 +14,7 @@ open class WorkoutPlan: Serializable {
     var workoutName     : String? = null
 //    var dateFrom        : Date? = null
 //    var dateTo          : Date? = null
+    var totalDuration   : String? = null
     var frequency       : Int? = null
     var avgDuration     : Int? = null
     var goal            : Goal? = null

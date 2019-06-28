@@ -7,8 +7,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,8 +40,10 @@ class WorkoutPlanFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_workout,container,false)
-        val fabAddWorkout: FloatingActionButton = view.findViewById(R.id.fab_AddWorkout)
+//        val view = inflater.inflate(R.layout.fragment_workout,container,false)
+        val view = inflater.inflate(R.layout.activity_workout_plans,container,false)
+//        val fabAddWorkout: FloatingActionButton = view.findViewById(R.id.fab_AddWorkout)
+        val fabAddWorkout: FloatingActionButton = view.findViewById(R.id.fab_AddWorkout2)
 
         setRecyclerView(view)
 
@@ -48,7 +52,11 @@ class WorkoutPlanFragment : Fragment() {
         workoutViewModel!!.getAllWorkoutPlansFromOfflineDB()
 
         workoutViewModel!!.liveWorkoutsList.observe(this, Observer {
+            Log.d("aaa","observer lista ")
             workoutPlans = it
+            Log.d("aaa","${it!!.forEach {
+                Log.d("aaa","plan je: ${it.workoutName}")
+            }}")
 
             adapter.loadWorkoutPlans(workoutPlans as ArrayList<WorkoutPlan>)
             adapter.notifyDataSetChanged()
@@ -68,11 +76,12 @@ class WorkoutPlanFragment : Fragment() {
     }
 
     private fun setRecyclerView(view: View){
-        recyclerView = view.findViewById(R.id.rec_workouts)
+        recyclerView = view.findViewById(R.id.rc_workout_plans)
 
         recyclerView.setHasFixedSize(true)
 
-        manager = LinearLayoutManager(activity!!.applicationContext)
+//        manager = LinearLayoutManager(activity!!.applicationContext)
+        manager = GridLayoutManager(activity!!.applicationContext,2)
         adapter = AddWorkoutPlanAdapter()
 
         recyclerView.layoutManager = manager

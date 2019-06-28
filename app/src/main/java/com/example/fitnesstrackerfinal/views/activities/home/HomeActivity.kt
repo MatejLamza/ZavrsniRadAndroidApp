@@ -40,6 +40,7 @@ class HomeActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+
         homeViewModel = ViewModelProviders.of(this,homeFactory).get(HomeViewModel::class.java)
 
         homeViewModel!!.getUser()

@@ -30,5 +30,6 @@ class AddWorkoutPlanViewModel
                 Log.d("aaa","Workout Plan not Saved ${it.message}")
                 it.printStackTrace()
             })
+        disposables.add(disposable)
     }
 }

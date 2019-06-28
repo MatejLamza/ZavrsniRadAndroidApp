@@ -19,7 +19,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            tools:ignore="GoogleAppIndexingWarning">
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:replace="android:icon">
         <activity android:name=".views.activities.testProgress"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".views.activities.client.AddClientActivity"/>
