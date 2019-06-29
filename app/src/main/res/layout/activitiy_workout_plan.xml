@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/background_plan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/more_black"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:src="@drawable/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        <TextView
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="370dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="Strenght Challenge"
+                android:textSize="27sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        
+        <TextView
+                android:layout_marginTop="10dp"
+                android:text="Strenght oriented plan with 2 weeks hard 1 week deload "
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginTop="445dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/icon_calendar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+            <TextView
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="11sp"
+                    android:text="Frequency"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <TextView
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="5 days a week"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!-- DURATION -->
+
+    <LinearLayout
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/stopwatch_white"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+            <TextView
+                    android:textColor="@color/white"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="11sp"
+                    android:text="Duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <TextView
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="1 Hour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!-- GOAL -->
+    <LinearLayout
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/award"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+            <TextView
+                    android:textColor="@color/white"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="11sp"
+                    android:text="Goal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <TextView
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="Fatloss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_workouts"
+            android:layout_marginTop="490dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

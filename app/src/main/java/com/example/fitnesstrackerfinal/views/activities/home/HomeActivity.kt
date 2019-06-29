@@ -2,7 +2,6 @@ package com.example.fitnesstrackerfinal.views.activities.home
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
@@ -12,8 +11,6 @@ import android.util.Log
 import android.view.MenuItem
 import com.example.fitnesstrackerfinal.R
 import com.example.fitnesstrackerfinal.data.models.User
-import com.example.fitnesstrackerfinal.data.models.workout.WorkoutPlan
-import com.example.fitnesstrackerfinal.views.activities.testProgress
 import com.example.fitnesstrackerfinal.views.fragments.clients.ClientsFragment
 import com.example.fitnesstrackerfinal.views.fragments.schedule.ScheduleFragment
 import com.example.fitnesstrackerfinal.views.fragments.workout.WorkoutPlanFragment
@@ -74,8 +71,7 @@ class HomeActivity: AppCompatActivity() {
                 }
 
                 R.id.nav_settings -> {
-                    val intent = Intent(this,testProgress::class.java)
-                    startActivity(intent)
+
                 }
             }
 

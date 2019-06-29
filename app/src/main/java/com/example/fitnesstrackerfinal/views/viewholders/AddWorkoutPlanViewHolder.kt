@@ -1,13 +1,12 @@
 package com.example.fitnesstrackerfinal.views.viewholders
 
 import android.support.v7.widget.RecyclerView
-import android.util.Log
+
 import android.view.View
 import com.example.fitnesstrackerfinal.R
 import com.example.fitnesstrackerfinal.data.models.enums.Goal
 import com.example.fitnesstrackerfinal.data.models.workout.WorkoutPlan
 import kotlinx.android.synthetic.main.item_workout_plan.view.*
-import kotlinx.android.synthetic.main.item_workout_plan_second.view.*
 
 class AddWorkoutPlanViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
 

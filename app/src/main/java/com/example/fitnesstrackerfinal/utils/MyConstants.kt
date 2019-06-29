@@ -6,7 +6,8 @@ class MyConstants {
         const val VIDEO_URI_STRING = "android.resource://"
 
         //KEYS
-        const val EXTRA_LOGIN_INFO = "login_info"
+        const val EXTRA_LOGIN_INFO      = "login_info"
+        const val EXTRA_WORKOUT_PLAN    = "workout_plan"
 
         //Online Database
         const val USERS = "users"
