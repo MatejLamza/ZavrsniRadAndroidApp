@@ -8,6 +8,7 @@ class MyConstants {
         //KEYS
         const val EXTRA_LOGIN_INFO      = "login_info"
         const val EXTRA_WORKOUT_PLAN    = "workout_plan"
+        const val EXTRA_CLIENT          = "client_extra"
 
         //Online Database
         const val USERS = "users"

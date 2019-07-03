@@ -1,6 +1,8 @@
 package com.example.fitnesstrackerfinal.data.models.info
 
-class BasicMeasurements {
+import java.io.Serializable
+
+class BasicMeasurements:Serializable {
     var weight :Double = 0.0
     var height :Double = 0.0
 }

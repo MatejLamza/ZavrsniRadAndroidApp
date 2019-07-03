@@ -1,11 +1,14 @@
 package com.example.fitnesstrackerfinal.views.adapters
 
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.fitnesstrackerfinal.R
 import com.example.fitnesstrackerfinal.data.models.Client
+import com.example.fitnesstrackerfinal.utils.MyConstants
+import com.example.fitnesstrackerfinal.views.activities.client.info.ClientPageActivity
 import com.example.fitnesstrackerfinal.views.viewholders.AddClientViewHolder
 import kotlinx.android.synthetic.main.item_client.view.*
 
@@ -26,6 +29,9 @@ class AddClientAdapter : RecyclerView.Adapter<AddClientViewHolder>() {
         holder.client = clients[pos]
 
         holder.itemView.cv_athlete.setOnClickListener {
+            val intent = Intent(it.context,ClientPageActivity::class.java)
+            intent.putExtra(MyConstants.EXTRA_CLIENT,clients[pos])
+            it.context.startActivity(intent)
             Toast.makeText(it.context,"You clicked on: ${holder.client!!.clientBasicInfo!!.firstName}", Toast.LENGTH_SHORT).show()
         }
 

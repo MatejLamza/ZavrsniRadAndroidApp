@@ -1,6 +1,8 @@
 package com.example.fitnesstrackerfinal.data.models.info
 
-class Measurements {
+import java.io.Serializable
+
+class Measurements:Serializable {
     var bodyFatPercent : Double? = null
     var chest          : Double? = null
     var arms           : Double? = null
