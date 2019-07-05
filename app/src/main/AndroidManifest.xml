@@ -21,6 +21,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning"
             tools:replace="android:icon">
+        <activity android:name=".views.activities.workout.plan.AddWorkoutActivity"/>
+        <activity android:name=".views.activities.workout.exercise.AddExerciseActivity"/>
         <activity android:name=".views.activities.client.info.ClientPageActivity"/>
         <activity android:name=".views.activities.workout.plan.WorkoutPlanActivity"/>
         <activity android:name=".MainActivity"/>

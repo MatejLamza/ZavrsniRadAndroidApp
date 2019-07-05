@@ -1,8 +1,9 @@
 package com.example.fitnesstrackerfinal.data.models.workout
 
+import java.io.Serializable
 import java.util.*
 
-class Workout {
+class Workout:Serializable {
     var idWorkout       : Int? = 0
     var day             : Int? = 0
     var image           : Int? = 0

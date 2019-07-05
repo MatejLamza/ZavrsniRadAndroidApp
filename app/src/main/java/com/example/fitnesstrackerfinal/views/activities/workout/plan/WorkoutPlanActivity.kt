@@ -1,12 +1,16 @@
 package com.example.fitnesstrackerfinal.views.activities.workout.plan
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import com.example.fitnesstrackerfinal.R
 import com.example.fitnesstrackerfinal.data.models.workout.Workout
+import com.example.fitnesstrackerfinal.utils.MyConstants
 import com.example.fitnesstrackerfinal.views.adapters.AddWorkoutAdapter
+import kotlinx.android.synthetic.main.activitiy_workout_plan.*
 
 
 class WorkoutPlanActivity:AppCompatActivity() {
@@ -17,6 +21,18 @@ class WorkoutPlanActivity:AppCompatActivity() {
     private lateinit var manager        : LinearLayoutManager
     private lateinit var adapter        : AddWorkoutAdapter
 
+    override fun onResume() {
+        super.onResume()
+        if (intent?.extras!!.get(MyConstants.EXTRA_WORKOUT)!= null){
+            Log.d("aaa","Ima nesto ovdje")
+            workouts.add(intent?.extras!!.get(MyConstants.EXTRA_WORKOUT) as Workout)
+            adapter.notifyDataSetChanged()
+        } else{
+            Log.d("aaa","Nada nada")
+        }
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activitiy_workout_plan)
@@ -26,6 +42,17 @@ class WorkoutPlanActivity:AppCompatActivity() {
         testWorkouts()
         adapter.loadWorkouts(workouts)
         adapter.notifyDataSetChanged()
+
+        btn_Add_workout_plan.setOnClickListener {
+            val intent = Intent(this,AddWorkoutActivity::class.java)
+            startActivity(intent)
+        }
+
+        backLayout.setOnClickListener {
+            onBackPressed()
+        }
+
+
 
     }
 

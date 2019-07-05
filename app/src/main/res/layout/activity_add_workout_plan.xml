@@ -94,31 +94,6 @@
 
                     </LinearLayout>
 
-                    <!--<LinearLayout-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:orientation="vertical">-->
-
-                        <!--<TextView-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:text="starting date"-->
-                                <!--android:textAllCaps="true"-->
-                                <!--android:textSize="@dimen/login_textview_size"-->
-                                <!--android:textColor="@color/white"/>-->
-
-                        <!--<DatePicker-->
-                                <!--android:id="@+id/date_workout_start"-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="440dp"-->
-                                <!--android:textSize="@dimen/login_textview_size"-->
-                                <!--android:textColor="@color/white"-->
-                                <!--android:layout_marginTop="5dp"-->
-                                <!--android:paddingLeft="@dimen/login_edittext_padding"-->
-                                <!--android:paddingRight="@dimen/login_edittext_padding"/>-->
-
-
-                    <!--</LinearLayout>-->
 
                     <LinearLayout
                             android:layout_width="match_parent"
@@ -192,7 +167,7 @@
                         android:id="@+id/btn_Create_Workout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Finish"
+                        android:text="Next"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:paddingRight="70dp"
