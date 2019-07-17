@@ -13,6 +13,7 @@ class ClientDetailsFragment:Fragment() {
         var view = inflater.inflate(R.layout.tab_client_info,container,false)
 
 
+
         return view
     }
 }

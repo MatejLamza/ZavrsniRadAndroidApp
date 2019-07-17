@@ -188,18 +188,18 @@ class DataConverter {
     }
 
     @TypeConverter
-    fun toWorkoutList(workouts:String):List<Workout>{
+    fun toWorkoutList(workouts:String):ArrayList<Workout>{
         val gson = Gson()
-        val type = object : TypeToken<List<Workout>>() {}.type
+        val type = object : TypeToken<ArrayList<Workout>>() {}.type
 
         return gson.fromJson(workouts,type)
     }
 
     @TypeConverter
-    fun fromWorkoutList(workouts: List<Workout>): String?{
+    fun fromWorkoutList(workouts: ArrayList<Workout>): String?{
 
         val gson = Gson()
-        val type = object: TypeToken<List<Workout>>() {}.type
+        val type = object: TypeToken<ArrayList<Workout>>() {}.type
 
         return gson.toJson(workouts,type)
     }

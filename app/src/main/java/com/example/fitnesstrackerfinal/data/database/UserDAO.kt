@@ -3,8 +3,10 @@ package com.example.fitnesstrackerfinal.data.database
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
+import android.arch.persistence.room.Update
 import com.example.fitnesstrackerfinal.data.models.Client
 import com.example.fitnesstrackerfinal.data.models.User
+import com.example.fitnesstrackerfinal.data.models.workout.Workout
 import com.example.fitnesstrackerfinal.data.models.workout.WorkoutPlan
 import io.reactivex.Flowable
 import io.reactivex.Single
@@ -20,6 +22,9 @@ interface UserDAO {
 
     @Insert
     fun saveUserToOfflineDatabase(user:User)
+
+    @Update
+    fun updateWorkoutPlan(workoutPlan: WorkoutPlan)
 
     @Query("SELECT * FROM workoutPlan")
     fun getAllWorkoutPlansFromOfflineDB():Flowable<List<WorkoutPlan>>

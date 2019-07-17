@@ -13,6 +13,8 @@ class ClientWorkoutsFragment:Fragment() {
         var view = inflater.inflate(R.layout.tab_client_workouts,container,false)
 
 
+
+
         return view
     }
 }

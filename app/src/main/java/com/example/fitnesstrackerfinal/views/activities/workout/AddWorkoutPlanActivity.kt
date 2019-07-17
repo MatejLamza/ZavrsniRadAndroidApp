@@ -28,7 +28,6 @@ class AddWorkoutPlanActivity: AppCompatActivity() {
 
         btn_Create_Workout.setOnClickListener {
             val workoutPlan = getWorkoutPlan()
-            Log.d("aaa","Workout plan je: ${workoutPlan.avgDuration} ${workoutPlan.frequency} ${workoutPlan.goal}")
             addWorkoutPlanViewModel!!.saveWorkoutPlanToOfflineDB(workoutPlan)
             setResult(Activity.RESULT_OK)
             finish()
@@ -40,6 +39,7 @@ class AddWorkoutPlanActivity: AppCompatActivity() {
         var workoutPlan = WorkoutPlan()
 
         workoutPlan.workoutName = et_workout_name.text.toString()
+        workoutPlan.totalDuration = et_total_workout_plan_duration.text.toString()
         workoutPlan.frequency = et_num_workouts.text.toString().toInt()
         workoutPlan.avgDuration = et_avg_workout_duration.text.toString().toInt()
 

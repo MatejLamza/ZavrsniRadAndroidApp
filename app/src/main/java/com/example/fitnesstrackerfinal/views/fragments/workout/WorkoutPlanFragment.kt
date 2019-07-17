@@ -40,9 +40,7 @@ class WorkoutPlanFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//        val view = inflater.inflate(R.layout.fragment_workout,container,false)
         val view = inflater.inflate(R.layout.fragment_workout_plans,container,false)
-//        val fabAddWorkout: FloatingActionButton = view.findViewById(R.id.fab_AddWorkout)
         val fabAddWorkout: FloatingActionButton = view.findViewById(R.id.fab_AddWorkout2)
 
         setRecyclerView(view)
@@ -52,12 +50,7 @@ class WorkoutPlanFragment : Fragment() {
         workoutViewModel!!.getAllWorkoutPlansFromOfflineDB()
 
         workoutViewModel!!.liveWorkoutsList.observe(this, Observer {
-            Log.d("aaa","observer lista ")
             workoutPlans = it
-            Log.d("aaa","${it!!.forEach {
-                Log.d("aaa","plan je: ${it.workoutName}")
-            }}")
-
             adapter.loadWorkoutPlans(workoutPlans as ArrayList<WorkoutPlan>)
             adapter.notifyDataSetChanged()
         })
@@ -80,7 +73,6 @@ class WorkoutPlanFragment : Fragment() {
 
         recyclerView.setHasFixedSize(true)
 
-//        manager = LinearLayoutManager(activity!!.applicationContext)
         manager = GridLayoutManager(activity!!.applicationContext,2)
         adapter = AddWorkoutPlanAdapter()
 

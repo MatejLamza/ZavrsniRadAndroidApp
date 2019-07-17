@@ -38,7 +38,7 @@ class HomeViewModel
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                Log.d("aaa","Registration successful")
+                Log.d("aaa","Registration successful HOME VM")
             },{
                 Log.d("aaa","Registration Failed: ${it.message}")
             })

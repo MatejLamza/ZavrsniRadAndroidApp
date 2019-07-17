@@ -29,7 +29,7 @@ class UserHelper {
                 return false
             }
 
-            Log.d("aaa","Registration successful")
+            Log.d("aaa","Registration successful USER HELPER")
             return true
         }
     }

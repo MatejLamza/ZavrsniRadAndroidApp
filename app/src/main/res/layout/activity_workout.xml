@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3b475b">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background_plan">
+
+        <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Leg workout"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="35sp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_exercises"
+            android:layout_marginTop="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<include-->
+            <!--layout="@layout/item_exercise"-->
+            <!--android:layout_marginTop="180dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"/>-->
+
+
+
+    <!--<LinearLayout-->
+            <!--android:layout_marginTop="180dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="360dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:background="@color/white">-->
+
+        <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--<TextView-->
+                    <!--android:text="Deadlifts"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textColor="#000"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="20dp"-->
+
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+
+            <!--<android.support.v7.widget.AppCompatImageButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/three_dots"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+            <!--/>-->
+
+        <!--</RelativeLayout>-->
+
+
+
+
+
+    <!--</LinearLayout>-->
+
+    <android.support.design.widget.FloatingActionButton
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_baseline_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>

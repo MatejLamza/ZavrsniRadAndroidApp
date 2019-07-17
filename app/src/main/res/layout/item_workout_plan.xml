@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:id="@+id/cv_workout_plan"
         xmlns:android="http://schemas.android.com/apk/res/android"

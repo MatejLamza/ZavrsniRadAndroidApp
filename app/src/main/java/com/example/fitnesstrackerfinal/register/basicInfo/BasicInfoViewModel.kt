@@ -57,7 +57,7 @@ class BasicInfoViewModel
             return false
         }
 
-        Log.d("aaa","Registration successful")
+        Log.d("aaa","Registration successful Basic Info VM")
         return true
     }
 }

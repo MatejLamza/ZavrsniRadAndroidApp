@@ -26,7 +26,7 @@ class AddWorkoutPlanViewHolder (itemView: View): RecyclerView.ViewHolder(itemVie
             when(field!!.goal){
                 Goal.FAT_LOSS       -> itemView.tv_item_plan_goal.text = "FAT LOSS"
                 Goal.GAIN_MUSCLE    -> itemView.tv_item_plan_goal.text = "MUSCLE"
-                Goal.STRENGHT       -> itemView.tv_item_plan_goal.text = "Strenght"
+                Goal.STRENGHT       -> itemView.tv_item_plan_goal.text = "STRENGTH"
             }
 
             itemView.tv_item_workout_total_duration.text = field!!.totalDuration + "weeks"

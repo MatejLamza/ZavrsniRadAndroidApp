@@ -18,5 +18,5 @@ open class WorkoutPlan: Serializable {
     var frequency       : Int? = null
     var avgDuration     : Int? = null
     var goal            : Goal? = null
-    var workouts        : List<Workout> = arrayListOf()
+    var workouts        : ArrayList<Workout> = arrayListOf()
 }

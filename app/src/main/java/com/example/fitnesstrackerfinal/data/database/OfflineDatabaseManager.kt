@@ -11,6 +11,10 @@ import javax.inject.Inject
 class OfflineDatabaseManager
 @Inject constructor(val userDAO: UserDAO) {
 
+    fun updateWorkoutPlan(workoutPlan: WorkoutPlan){
+        userDAO.updateWorkoutPlan(workoutPlan)
+    }
+
     fun saveWorkoutPlanToOfflineDB(workoutPlan: WorkoutPlan){
         userDAO.saveWorkoutPlanToOfflineDB(workoutPlan)
     }
