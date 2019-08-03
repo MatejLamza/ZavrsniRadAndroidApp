@@ -11,6 +11,7 @@ import com.example.fitnesstrackerfinal.views.activities.home.HomeModule
 import com.example.fitnesstrackerfinal.views.activities.workout.AddWorkoutPlanActivity
 import com.example.fitnesstrackerfinal.views.activities.workout.AddWorkoutPlanModule
 import com.example.fitnesstrackerfinal.views.activities.workout.plan.AddWorkoutActivity
+import com.example.fitnesstrackerfinal.views.activities.workout.plan.WorkoutPlanActivity
 import com.example.fitnesstrackerfinal.views.activities.workout.viewmodels.AddWorkoutModule
 import com.example.fitnesstrackerfinal.views.fragments.clients.ClientsFragment
 import com.example.fitnesstrackerfinal.views.fragments.clients.ClientsModule
@@ -43,7 +44,7 @@ abstract class BuilderModule {
     @ContributesAndroidInjector(modules = arrayOf(AddWorkoutPlanModule::class))
     abstract fun bindAddWorkoutPlanAcivity(): AddWorkoutPlanActivity
 
-
     @ContributesAndroidInjector(modules = arrayOf(AddWorkoutModule::class))
     abstract fun bindAddWorkoutActivity(): AddWorkoutActivity
+
 }

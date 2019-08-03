@@ -29,7 +29,8 @@ class AddWorkoutPlanViewHolder (itemView: View): RecyclerView.ViewHolder(itemVie
                 Goal.STRENGHT       -> itemView.tv_item_plan_goal.text = "STRENGTH"
             }
 
-            itemView.tv_item_workout_total_duration.text = field!!.totalDuration + "weeks"
+            itemView.tv_plan_name.text = field!!.workoutName
+            itemView.tv_item_workout_total_duration.text = field!!.totalDuration + " weeks"
             itemView.iv_item_plan_image.setBackgroundResource(R.drawable.leanmus)
         }
 }

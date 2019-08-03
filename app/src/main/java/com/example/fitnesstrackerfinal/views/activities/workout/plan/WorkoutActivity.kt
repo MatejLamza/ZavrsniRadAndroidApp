@@ -7,8 +7,10 @@ import android.support.v7.widget.RecyclerView
 import com.example.fitnesstrackerfinal.R
 import com.example.fitnesstrackerfinal.data.models.workout.Excercise
 import com.example.fitnesstrackerfinal.data.models.workout.Workout
+import com.example.fitnesstrackerfinal.views.activities.workout.exercise.AddExerciseDialog
 import com.example.fitnesstrackerfinal.views.adapters.AddExerciseAdapter
 import com.example.fitnesstrackerfinal.views.adapters.AddWorkoutAdapter
+import kotlinx.android.synthetic.main.activity_workout.*
 
 class WorkoutActivity:AppCompatActivity() {
 
@@ -23,27 +25,37 @@ class WorkoutActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout)
 
-        testWorkouts()
+//        testWorkouts()
 
         setRecyclerView()
         adapter.loadExercises(exercises)
         adapter.notifyDataSetChanged()
 
-    }
-
-    private fun testWorkouts(){
-        var excercise = Excercise()
-
-        excercise.exerciseName = "Sqaut"
-
-        var excercise2 = Excercise()
-
-        excercise2.exerciseName = "Leg press"
-
-        exercises.add(excercise)
-        exercises.add(excercise2)
+        fab_add_exercise.setOnClickListener {
+            //TODO open add exercise DIALOG and save it to recycler viwe
+            openDialog()
+        }
 
     }
+
+    private fun openDialog(){
+        var dialog = AddExerciseDialog()
+        dialog.show(supportFragmentManager,"Test")
+    }
+
+//    private fun testWorkouts(){
+//        var excercise = Excercise()
+//
+//        excercise.exerciseName = "Sqaut"
+//
+//        var excercise2 = Excercise()
+//
+//        excercise2.exerciseName = "Leg press"
+//
+//        exercises.add(excercise)
+//        exercises.add(excercise2)
+//
+//    }
 
 
     private fun setRecyclerView(){

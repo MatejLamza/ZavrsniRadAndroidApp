@@ -47,15 +47,13 @@ class WorkoutPlanActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activitiy_workout_plan)
+        setRecyclerView()
 
         if(intent.extras.get(MyConstants.EXTRA_WORKOUT_PLAN) != null){
             currentWorkoutPlan =  intent?.extras!!.get(MyConstants.EXTRA_WORKOUT_PLAN) as WorkoutPlan
             intent?.extras!!.remove(MyConstants.EXTRA_WORKOUT_PLAN)
         }
 
-        setRecyclerView()
-
-//        testWorkouts()
         adapter.loadWorkouts(workouts)
         adapter.notifyDataSetChanged()
 
