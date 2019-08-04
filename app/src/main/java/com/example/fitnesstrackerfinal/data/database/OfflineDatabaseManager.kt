@@ -11,6 +11,10 @@ import javax.inject.Inject
 class OfflineDatabaseManager
 @Inject constructor(val userDAO: UserDAO) {
 
+    fun getWorkoutPlanByID(idWorkoutPlan:Int):Single<WorkoutPlan>{
+        return userDAO.getWorkoutPlanByID(idWorkoutPlan)
+    }
+
     fun updateWorkoutPlan(workoutPlan: WorkoutPlan){
         userDAO.updateWorkoutPlan(workoutPlan)
     }

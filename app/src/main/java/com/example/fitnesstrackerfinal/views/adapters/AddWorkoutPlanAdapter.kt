@@ -2,6 +2,7 @@ package com.example.fitnesstrackerfinal.views.adapters
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.fitnesstrackerfinal.R
@@ -28,8 +29,9 @@ class AddWorkoutPlanAdapter: RecyclerView.Adapter<AddWorkoutPlanViewHolder>() {
         holder.workoutPlan = workoutPlans[pos]
 
         holder.itemView.cv_workout_plan.setOnClickListener {
+            Log.d("aaa","id je : ${workoutPlans[pos].id}")
             val intent = Intent(it.context,WorkoutPlanActivity::class.java)
-            intent.putExtra(MyConstants.EXTRA_WORKOUT_PLAN,workoutPlans[pos])
+            intent.putExtra(MyConstants.EXTRA_WORKOUT_PLAN,workoutPlans[pos].id)
             it.context.startActivity(intent)
         }
 

@@ -12,6 +12,9 @@ import javax.inject.Inject
 
 class UserRepoImpl
 @Inject constructor(val onlineDb: OnlineDatabaseManager, val offlineDb:OfflineDatabaseManager):UserRepo{
+    override fun getWorkoutPlanById(idWorkoutPlan: Int): Single<WorkoutPlan> {
+        return offlineDb.getWorkoutPlanByID(idWorkoutPlan)
+    }
 
     override fun updateWorkoutPlan(workoutPlan: WorkoutPlan) {
         offlineDb.updateWorkoutPlan(workoutPlan)

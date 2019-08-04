@@ -15,6 +15,7 @@ interface UserRepo {
     fun registerUser(user:User)
 
     //Offline
+    fun getWorkoutPlanById(idWorkoutPlan:Int):Single<WorkoutPlan>
     fun getUserFromOfflineDatabase(email:String, password:String): Single<User>
     fun getAllClientsFromOfflineDb(): Flowable<List<Client>>
     fun getAllWorkoutPlansFromOfflineDB():Flowable<List<WorkoutPlan>>

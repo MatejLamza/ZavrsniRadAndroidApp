@@ -26,6 +26,9 @@ interface UserDAO {
     @Update
     fun updateWorkoutPlan(workoutPlan: WorkoutPlan)
 
+    @Query("SELECT * FROM workoutPlan WHERE id = :idWorkoutPlan")
+    fun getWorkoutPlanByID(idWorkoutPlan:Int):Single<WorkoutPlan>
+
     @Query("SELECT * FROM workoutPlan")
     fun getAllWorkoutPlansFromOfflineDB():Flowable<List<WorkoutPlan>>
 

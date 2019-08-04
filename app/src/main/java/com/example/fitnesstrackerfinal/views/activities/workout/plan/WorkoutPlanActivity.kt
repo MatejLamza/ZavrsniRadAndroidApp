@@ -26,36 +26,51 @@ import javax.inject.Inject
 
 class WorkoutPlanActivity:AppCompatActivity() {
 
+    @Inject
+    lateinit var factory : WorkoutActivityVMFactory
+
+    var viewmodel: WorkoutActivityViewModel? = null
+
     var workouts: ArrayList<Workout> = arrayListOf()
 
     private lateinit var recyclerView   : RecyclerView
     private lateinit var manager        : LinearLayoutManager
     private lateinit var adapter        : AddWorkoutAdapter
 
+    private var recivedID :Int = 0
     private var currentWorkoutPlan = WorkoutPlan()
 
 
     override fun onResume() {
         super.onResume()
-        if(intent.extras.get(MyConstants.EXTRA_WORKOUT_TO_WORKOUT_PLAN_ACT) != null){
-            currentWorkoutPlan = intent.extras.get(MyConstants.EXTRA_WORKOUT_TO_WORKOUT_PLAN_ACT) as WorkoutPlan
+
+        if (intent.hasExtra(MyConstants.EXTRA_WORKOUT_PLAN)){
+            recivedID = intent.getIntExtra(MyConstants.EXTRA_WORKOUT_PLAN,0)
+            viewmodel!!.getWorkoutPlayFromDatabase(recivedID)
+        }
+
+        if(intent.hasExtra(MyConstants.EXTRA_WORKOUT_TO_WORKOUT_PLAN_ACT)){
+            currentWorkoutPlan = intent.getSerializableExtra(MyConstants.EXTRA_WORKOUT_TO_WORKOUT_PLAN_ACT) as WorkoutPlan
             adapter.loadWorkouts(currentWorkoutPlan.workouts)
             adapter.notifyDataSetChanged()
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activitiy_workout_plan)
         setRecyclerView()
 
-        if(intent.extras.get(MyConstants.EXTRA_WORKOUT_PLAN) != null){
-            currentWorkoutPlan =  intent?.extras!!.get(MyConstants.EXTRA_WORKOUT_PLAN) as WorkoutPlan
-            intent?.extras!!.remove(MyConstants.EXTRA_WORKOUT_PLAN)
-        }
+        viewmodel = ViewModelProviders.of(this,factory).get(WorkoutActivityViewModel::class.java)
 
-        adapter.loadWorkouts(workouts)
-        adapter.notifyDataSetChanged()
+
+        viewmodel!!.liveWorkoutPlan.observe(this, Observer {
+            currentWorkoutPlan = it!!
+            adapter.loadWorkouts(it.workouts)
+            adapter.notifyDataSetChanged()
+        })
+
 
         btn_Add_workout_plan.setOnClickListener {
             val intent = Intent(this,AddWorkoutActivity::class.java)
@@ -70,21 +85,6 @@ class WorkoutPlanActivity:AppCompatActivity() {
 
     }
 
-    //TODO DELETE
-    private fun testWorkouts(){
-        var workout1 = Workout()
-
-        workout1.day = 1
-        workout1.workoutName = "Legs"
-
-        var workout2 = Workout()
-
-        workout2.day = 2
-        workout2.workoutName = "Chest and Back"
-
-        workouts.add(workout1)
-        workouts.add(workout2)
-    }
 
     private fun setRecyclerView(){
         recyclerView = findViewById(R.id.rec_workouts)
