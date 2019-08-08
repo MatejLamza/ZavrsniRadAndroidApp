@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
+        android:background="@drawable/register_background"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -8,9 +9,10 @@
                     android:layout_height="match_parent">
 
         <TextView
+
                 android:id="@+id/basicMeasureLabel"
                 android:textSize="35sp"
-                android:textColor="#000"
+                android:textColor="@color/white"
                 android:text="Basic Measurements"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:layout_marginEnd="8dp"
@@ -31,7 +33,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Height: "
@@ -39,7 +41,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_height"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="175"
                         android:layout_width="wrap_content"
@@ -53,7 +56,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Weight: "
@@ -61,7 +64,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_weight"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="63"
                         android:layout_width="wrap_content"
@@ -80,7 +84,7 @@
                 android:id="@+id/MeasurementsLabel"
                 android:layout_below="@id/basciMeasureContainer"
                 android:textSize="35sp"
-                android:textColor="#000"
+                android:textColor="@color/white"
                 android:text="Measurements"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:layout_marginEnd="8dp"
@@ -101,7 +105,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Body Fat Percentage: "
@@ -109,7 +113,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_bf"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="5.4"
                         android:layout_width="wrap_content"
@@ -122,7 +127,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Chest: "
@@ -130,7 +135,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_chest"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="63"
                         android:layout_width="wrap_content"
@@ -143,7 +149,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Arms: "
@@ -151,7 +157,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_arms"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="63"
                         android:layout_width="wrap_content"
@@ -164,7 +171,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Legs: "
@@ -172,7 +179,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_legs"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="63"
                         android:layout_width="wrap_content"
@@ -185,7 +193,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Waist: "
@@ -193,7 +201,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_waist"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="63"
                         android:layout_width="wrap_content"
@@ -212,7 +221,7 @@
                 android:id="@+id/Info"
                 android:layout_below="@id/measurementsContainer"
                 android:textSize="35sp"
-                android:textColor="#000"
+                android:textColor="@color/white"
                 android:text="Information"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:layout_marginEnd="8dp"
@@ -233,7 +242,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Age: "
@@ -241,7 +250,8 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/client_details_Age"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="37"
                         android:layout_width="wrap_content"
@@ -254,7 +264,7 @@
                           android:layout_height="match_parent">
 
                 <TextView
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:layout_marginLeft="15dp"
                         android:textSize="25sp"
                         android:text="Gender: "
@@ -262,7 +272,7 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="25sp"
                         android:text="Female"
                         android:layout_width="wrap_content"
