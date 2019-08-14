@@ -21,7 +21,7 @@ class ClientPageActivity:AppCompatActivity() {
     private var tabLayout: TabLayout        ? = null
     private var viewPager:ViewPager         ? = null
 
-    private var dataListener: RecivedDataListener? = null
+    lateinit var recivedInfo: Client
     private var fragment = ClientDetailsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class ClientPageActivity:AppCompatActivity() {
         setContentView(R.layout.activity_client_details)
 
         if(intent.hasExtra(MyConstants.EXTRA_CLIENT)){
-            var recivedInfo = intent.getSerializableExtra(MyConstants.EXTRA_CLIENT) as Client
+            recivedInfo = intent.getSerializableExtra(MyConstants.EXTRA_CLIENT) as Client
             fragment.recivedClient = recivedInfo
         }
 
@@ -45,6 +45,7 @@ class ClientPageActivity:AppCompatActivity() {
 
         btn_details.setOnClickListener {
             val intent = Intent(this,ClientInfoActivity::class.java)
+            intent.putExtra(MyConstants.EXTRA_CLIENT_STATS,recivedInfo)
             startActivity(intent)
         }
     }

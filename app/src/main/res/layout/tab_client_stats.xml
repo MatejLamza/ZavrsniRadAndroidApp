@@ -82,6 +82,7 @@
                     android:layout_alignParentEnd="true"/>
 
             <TextView
+                    android:id="@+id/client_stats_arms_diff"
                     android:textColor="@color/white"
                     android:text="+3cm"
                     android:background="@drawable/shape_corner_textview_green"
@@ -99,6 +100,7 @@
 
 
             <TextView
+                    android:id="@+id/client_stats_arms"
                     android:textColor="@color/white"
                     android:textSize="35sp"
                     android:text="30cm"
