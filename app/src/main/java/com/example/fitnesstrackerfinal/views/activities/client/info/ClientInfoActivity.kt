@@ -11,15 +11,17 @@ import com.example.fitnesstrackerfinal.utils.MyConstants
 import com.example.fitnesstrackerfinal.views.adapters.TabAdapterClient
 import com.example.fitnesstrackerfinal.views.fragments.clients.tabs.ClientAllWorkoutsFragment
 import com.example.fitnesstrackerfinal.views.fragments.clients.tabs.ClientStatisticsFragment
+import com.example.fitnesstrackerfinal.views.fragments.clients.tabs.ClientWorkoutsFragment
 import kotlinx.android.synthetic.main.activity_client_info.*
 
 class ClientInfoActivity:AppCompatActivity(){
 
-    private var tabAdapter: TabAdapterClient? = null
-    private var tabLayout: TabLayout? = null
-    private var viewPager: ViewPager? = null
+    private var tabAdapter  : TabAdapterClient? = null
+    private var tabLayout   : TabLayout? = null
+    private var viewPager   : ViewPager? = null
 
-    var fragmentStats = ClientStatisticsFragment()
+    var fragmentStats        = ClientStatisticsFragment()
+    var fragmentWorkoutPlans = ClientAllWorkoutsFragment()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +30,7 @@ class ClientInfoActivity:AppCompatActivity(){
 
         if (intent.hasExtra(MyConstants.EXTRA_CLIENT_STATS)){
             fragmentStats.client = intent.getSerializableExtra(MyConstants.EXTRA_CLIENT_STATS) as Client
+            fragmentWorkoutPlans.currentClient = intent.getSerializableExtra(MyConstants.EXTRA_CLIENT_STATS) as Client
         }
 
         viewPager = client_info_viewpager
@@ -36,7 +39,7 @@ class ClientInfoActivity:AppCompatActivity(){
 
         tabAdapter = TabAdapterClient(supportFragmentManager)
         tabAdapter!!.addFragment(fragmentStats,"Statistics")
-        tabAdapter!!.addFragment(ClientAllWorkoutsFragment(),"All workouts")
+        tabAdapter!!.addFragment(fragmentWorkoutPlans,"All workouts")
 
         viewPager!!.adapter = tabAdapter
         tabLayout!!.setupWithViewPager(viewPager)

@@ -11,7 +11,7 @@ class ClientPlansAdapter: RecyclerView.Adapter<ClientPlansViewHolder>() {
 
     private var mWorkoutPlans: List<WorkoutPlan> = arrayListOf()
 
-    fun loadWorkouts(workoutPlans:List<WorkoutPlan>){
+    fun loadWorkouts(workoutPlans:ArrayList<WorkoutPlan>){
         mWorkoutPlans = workoutPlans
     }
 

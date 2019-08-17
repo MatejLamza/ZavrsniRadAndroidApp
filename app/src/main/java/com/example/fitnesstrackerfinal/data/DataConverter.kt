@@ -9,6 +9,7 @@ import com.example.fitnesstrackerfinal.data.models.info.BasicInformation
 import com.example.fitnesstrackerfinal.data.models.info.BasicMeasurements
 import com.example.fitnesstrackerfinal.data.models.info.LoginInfo
 import com.example.fitnesstrackerfinal.data.models.info.Measurements
+import com.example.fitnesstrackerfinal.data.models.workout.ClientWorkouts
 import com.example.fitnesstrackerfinal.data.models.workout.Excercise
 import com.example.fitnesstrackerfinal.data.models.workout.Workout
 import com.example.fitnesstrackerfinal.data.models.workout.WorkoutPlan
@@ -16,8 +17,10 @@ import com.google.common.collect.Sets
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.util.*
+import kotlin.collections.ArrayList
 
 class DataConverter {
+
     @TypeConverter
     fun fromUser(user: User): String?{
 
@@ -35,24 +38,6 @@ class DataConverter {
 
         return gson.fromJson(userString,type)
     }
-
-//    @TypeConverter
-//    fun fromAthleteUser(athleteUser: AthleteUser): String?{
-//
-//        val gson = Gson()
-//        val type = object: TypeToken<AthleteUser>() {}.type
-//
-//        return gson.toJson(athleteUser,type)
-//    }
-
-//    @TypeConverter
-//    fun toAthleteUser(athlUserString: String): AthleteUser? {
-//
-//        val gson = Gson()
-//        val type = object: TypeToken<AthleteUser>() {}.type
-//
-//        return gson.fromJson(athlUserString,type)
-//    }
 
     @TypeConverter
     fun toBasicInformation(stringInfo:String):BasicInformation?{
@@ -152,6 +137,40 @@ class DataConverter {
 
         return gson.toJson(cacheUser,type)
     }
+
+
+    @TypeConverter
+    fun fromClientWorkouts(clientWorkouts:ClientWorkouts):String?{
+        val gson = Gson()
+//        val type = object: TypeToken<ClientWorkouts>() {}.type
+
+        return gson.toJson(clientWorkouts)
+    }
+
+    @TypeConverter
+    fun toClientWorkouts(stringClientWorkouts:String):ClientWorkouts{
+        val gson = Gson()
+        val type = object : TypeToken<ClientWorkouts>() {}.type
+
+        return gson.fromJson(stringClientWorkouts,type)
+    }
+
+    @TypeConverter
+    fun toWorkoutPlanList(stringPlanList:String):List<WorkoutPlan>{
+        val gson = Gson()
+        val type = object : TypeToken<List<WorkoutPlan>>() {}.type
+
+        return gson.fromJson(stringPlanList,type)
+    }
+
+    @TypeConverter
+    fun fromWorkoutPlanList(planList:List<WorkoutPlan>):String?{
+        val gson = Gson()
+        val type = object: TypeToken<List<WorkoutPlan>>() {}.type
+
+        return gson.toJson(planList,type)
+    }
+
 
     @TypeConverter
     fun toWorkoutPlan(workoutPlan:String): WorkoutPlan {
@@ -272,6 +291,5 @@ class DataConverter {
 
         return gson.toJson(goal,type)
     }
-
 
 }

@@ -26,6 +26,12 @@ interface UserDAO {
     @Update
     fun updateWorkoutPlan(workoutPlan: WorkoutPlan)
 
+    @Query("UPDATE clients SET clientWorkoutPlans  = :mWorkoutPlans WHERE id = :mClientId")
+    fun updateClientsWorkoutPlans(mClientId:Int,mWorkoutPlans:ArrayList<WorkoutPlan>)
+//
+    @Update
+    fun updateClient(client: Client)
+
     @Query("SELECT * FROM workoutPlan WHERE id = :idWorkoutPlan")
     fun getWorkoutPlanByID(idWorkoutPlan:Int):Single<WorkoutPlan>
 

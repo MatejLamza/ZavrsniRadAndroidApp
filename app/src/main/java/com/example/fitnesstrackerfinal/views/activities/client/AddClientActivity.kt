@@ -10,6 +10,7 @@ import com.example.fitnesstrackerfinal.data.models.enums.Gender
 import com.example.fitnesstrackerfinal.data.models.info.BasicInformation
 import com.example.fitnesstrackerfinal.data.models.info.BasicMeasurements
 import com.example.fitnesstrackerfinal.data.models.info.Measurements
+import com.example.fitnesstrackerfinal.data.models.workout.ClientWorkouts
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_add_client.*
 import javax.inject.Inject
@@ -70,6 +71,7 @@ class AddClientActivity: AppCompatActivity()  {
         client.clientBasicInfo          = basicInfo
         client.clientBasicMeasurements  = basicMeasure
         client.clientMeasurements       = measure
+        client.clientWorkoutPlans       = ClientWorkouts()
 
         return client
     }

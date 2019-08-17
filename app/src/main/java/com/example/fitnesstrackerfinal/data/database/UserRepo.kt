@@ -21,6 +21,7 @@ interface UserRepo {
     fun getAllWorkoutPlansFromOfflineDB():Flowable<List<WorkoutPlan>>
 
     fun updateWorkoutPlan(workoutPlan: WorkoutPlan)
+    fun updateClient(client: Client)
 
 
     fun saveUserToOfflineDatabase(user:User)

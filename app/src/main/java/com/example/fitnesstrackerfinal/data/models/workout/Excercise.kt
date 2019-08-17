@@ -1,6 +1,8 @@
 package com.example.fitnesstrackerfinal.data.models.workout
 
-class Excercise {
+import java.io.Serializable
+
+class Excercise:Serializable {
     var idExcercise: Int? = 0
     var exerciseName: String? = null
     var excerciseDescription: String? = null

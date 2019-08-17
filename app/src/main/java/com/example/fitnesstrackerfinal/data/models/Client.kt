@@ -7,18 +7,26 @@ import android.arch.persistence.room.PrimaryKey
 import com.example.fitnesstrackerfinal.data.models.info.BasicInformation
 import com.example.fitnesstrackerfinal.data.models.info.BasicMeasurements
 import com.example.fitnesstrackerfinal.data.models.info.Measurements
+import com.example.fitnesstrackerfinal.data.models.workout.ClientWorkouts
+import com.example.fitnesstrackerfinal.data.models.workout.WorkoutPlan
 import java.io.Serializable
 
 @Entity(tableName = "clients")
 open class Client: Serializable {
     @PrimaryKey(autoGenerate = true)
     var id                      : Int?                  = null
+//    @Embedded
+    var clientWorkoutPlans      : ClientWorkouts?       = null
+
     @Embedded
     var clientBasicInfo         : BasicInformation?     = null
     @Embedded
     var clientBasicMeasurements : BasicMeasurements?    = null
     @Embedded
     var clientMeasurements      : Measurements?         = null
+
+
     @Ignore
-    var currentMeasurements: Measurements?              = null
+    var currentMeasurements     : Measurements?         = null
+
 }
