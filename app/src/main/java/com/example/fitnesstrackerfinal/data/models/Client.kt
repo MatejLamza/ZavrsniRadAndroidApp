@@ -15,16 +15,16 @@ import java.io.Serializable
 open class Client: Serializable {
     @PrimaryKey(autoGenerate = true)
     var id                      : Int?                  = null
-//    @Embedded
-    var clientWorkoutPlans      : ClientWorkouts?       = null
 
+    var clientWorkoutPlans      : ClientWorkouts?       = null
     @Embedded
     var clientBasicInfo         : BasicInformation?     = null
+
     @Embedded
     var clientBasicMeasurements : BasicMeasurements?    = null
+
     @Embedded
     var clientMeasurements      : Measurements?         = null
-
 
     @Ignore
     var currentMeasurements     : Measurements?         = null

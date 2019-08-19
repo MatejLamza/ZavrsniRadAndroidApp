@@ -48,6 +48,12 @@ class ClientPageActivity:AppCompatActivity() {
             intent.putExtra(MyConstants.EXTRA_CLIENT_STATS,recivedInfo)
             startActivity(intent)
         }
+
+        fab_edit_client.setOnClickListener {
+            val intent = Intent(this,ClientEditInfoActivity::class.java)
+            intent.putExtra(MyConstants.EXTRA_CLIENT_TO_CLIENT_EDIT_ACT,recivedInfo)
+            startActivity(intent)
+        }
     }
 
 }
