@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <TextView
+            android:text="Fitness Plans"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <SearchView
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/shape_search_bar"
+            android:tooltipText="Search Workout Plans"
+            android:layout_width="380dp"
+            android:layout_height="40dp"></SearchView>
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="120dp"
+            android:id="@+id/rec_workout_plans_selector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -12,6 +12,7 @@ class MyConstants {
         const val EXTRA_WORKOUT         = "workout_extra"
         const val EXTRA_ITEM_WORKOUT    = "single_workout_extra"
         const val EXTRA_CLIENT_STATS    = "client_stats_extra"
+        const val EXTRA_CLIENT_ID       = "client_id_extra"
 
         const val EXTRA_WORKOUT_PLAN_TO_ADD_ACT     = "extra_workout_plan_to_add_act"
         const val EXTRA_WORKOUT_TO_WORKOUT_PLAN_ACT = "exta_workout_to_workout_plan_act"

@@ -30,6 +30,7 @@ class ClientInfoActivityViewModel
                 Log.d("aaa","Burek nejde: ${it.message}")
                 it.printStackTrace()
             })
+        disposables.add(disposable)
     }
 
 }

@@ -27,11 +27,11 @@ class ClientDetailsFragment:Fragment() {
         if(recivedClient != null){
            view.client_details_Age.text = recivedClient!!.clientBasicInfo?.age.toString()
 
-            view.client_details_bf.text = recivedClient!!.clientMeasurements!!.bodyFatPercent.toString()
-            view.client_details_arms.text = recivedClient!!.clientMeasurements?.arms.toString()
-            view.client_details_chest.text = recivedClient!!.clientMeasurements?.chest.toString()
-            view.client_details_legs.text = recivedClient!!.clientMeasurements?.legs.toString()
-            view.client_details_waist.text = recivedClient!!.clientMeasurements?.waist.toString()
+            view.client_details_bf.text = recivedClient!!.currentMeasurements!!.bodyFatPercent.toString()
+            view.client_details_arms.text = recivedClient!!.currentMeasurements?.arms.toString()
+            view.client_details_chest.text = recivedClient!!.currentMeasurements?.chest.toString()
+            view.client_details_legs.text = recivedClient!!.currentMeasurements?.legs.toString()
+            view.client_details_waist.text = recivedClient!!.currentMeasurements?.waist.toString()
 
             view.client_details_height.text = recivedClient!!.clientBasicMeasurements?.height.toString()
             view.client_details_weight.text = recivedClient!!.clientBasicMeasurements?.weight.toString()

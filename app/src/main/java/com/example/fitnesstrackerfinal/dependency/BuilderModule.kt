@@ -6,6 +6,7 @@ import com.example.fitnesstrackerfinal.register.basicInfo.BasicInfoActivity
 import com.example.fitnesstrackerfinal.register.basicInfo.BasicInfoModule
 import com.example.fitnesstrackerfinal.views.activities.client.AddClientActivity
 import com.example.fitnesstrackerfinal.views.activities.client.AddClientModule
+import com.example.fitnesstrackerfinal.views.activities.client.info.ClientEditInfoActivity
 import com.example.fitnesstrackerfinal.views.activities.client.modules.ClientInfoActivityModule
 import com.example.fitnesstrackerfinal.views.activities.home.HomeActivity
 import com.example.fitnesstrackerfinal.views.activities.home.HomeModule
@@ -20,6 +21,7 @@ import com.example.fitnesstrackerfinal.views.fragments.clients.ClientsModule
 import com.example.fitnesstrackerfinal.views.fragments.clients.tabs.ClientAllWorkoutsFragment
 import com.example.fitnesstrackerfinal.views.fragments.workout.WorkoutPlanFragment
 import com.example.fitnesstrackerfinal.views.fragments.workout.WorkoutPlanModule
+import com.example.fitnesstrackerfinal.views.fragments.workout.WorkoutPlanSelectorActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -56,4 +58,9 @@ abstract class BuilderModule {
     @ContributesAndroidInjector(modules = arrayOf(ClientInfoActivityModule::class))
     abstract fun bindClientAllWorkoutsFragment(): ClientAllWorkoutsFragment
 
+    @ContributesAndroidInjector(modules = arrayOf(ClientInfoActivityModule::class))
+    abstract fun bindClientEditInfoActivity(): ClientEditInfoActivity
+
+    @ContributesAndroidInjector(modules = arrayOf(WorkoutPlanModule::class))
+    abstract fun bindWorkoutPlanSelectorFragment(): WorkoutPlanSelectorActivity
 }

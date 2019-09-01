@@ -45,6 +45,7 @@ class AddClientActivity: AppCompatActivity()  {
         var basicInfo = BasicInformation()
         var basicMeasure = BasicMeasurements()
         var measure = Measurements()
+        var currentMeasure = Measurements()
 
         //BASIC INFORMATION
         basicInfo.firstName = add_first_name.text.toString()
@@ -72,6 +73,7 @@ class AddClientActivity: AppCompatActivity()  {
         client.clientBasicMeasurements  = basicMeasure
         client.clientMeasurements       = measure
         client.clientWorkoutPlans       = ClientWorkouts()
+        client.currentMeasurements      = measure
 
         return client
     }

@@ -26,7 +26,7 @@ open class Client: Serializable {
     @Embedded
     var clientMeasurements      : Measurements?         = null
 
-    @Ignore
+    @Embedded(prefix = "current_measurements")
     var currentMeasurements     : Measurements?         = null
 
 }

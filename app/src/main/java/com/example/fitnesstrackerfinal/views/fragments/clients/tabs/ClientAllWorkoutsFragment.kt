@@ -2,6 +2,7 @@ package com.example.fitnesstrackerfinal.views.fragments.clients.tabs
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -14,11 +15,14 @@ import com.example.fitnesstrackerfinal.R
 import com.example.fitnesstrackerfinal.data.models.Client
 import com.example.fitnesstrackerfinal.data.models.enums.Goal
 import com.example.fitnesstrackerfinal.data.models.workout.WorkoutPlan
+import com.example.fitnesstrackerfinal.utils.MyConstants
+import com.example.fitnesstrackerfinal.utils.listeners.WorkoutPlanSelectorListener
 import com.example.fitnesstrackerfinal.views.activities.client.factories.ClientInfoActivityVMFactory
 import com.example.fitnesstrackerfinal.views.activities.client.viewmodels.ClientInfoActivityViewModel
 import com.example.fitnesstrackerfinal.views.adapters.ClientPlansAdapter
-import dagger.android.AndroidInjection
+import com.example.fitnesstrackerfinal.views.fragments.workout.WorkoutPlanSelectorActivity
 import dagger.android.support.AndroidSupportInjection
+import kotlinx.android.synthetic.main.tab_client_workout_plans.view.*
 import javax.inject.Inject
 
 class ClientAllWorkoutsFragment:Fragment() {
@@ -51,11 +55,26 @@ class ClientAllWorkoutsFragment:Fragment() {
 
         currentClient?.let { viewmodel!!.updateClient(it) }
 
-        currentClient!!.clientWorkoutPlans?.let { adapter.loadWorkouts(it.allWorkouts as ArrayList<WorkoutPlan>) }
+        Log.d("aaa","Client ima toliko planova: ${currentClient!!.clientWorkoutPlans!!.allWorkouts.size}")
+
+        currentClient!!.clientWorkoutPlans?.let { adapter.loadWorkouts(it.allWorkouts) }
         adapter.notifyDataSetChanged()
+
+
+        view.fab_add_plan.setOnClickListener {
+            val intent = Intent(it.context,WorkoutPlanSelectorActivity::class.java)
+            intent.putExtra(MyConstants.EXTRA_CLIENT_ID,currentClient)
+            startActivity(intent)
+        }
+
         return view
     }
 
+//    override fun WorkoutPlanSelectedListener(workoutPlan: WorkoutPlan) {
+//        if (workoutPlan.id != null){
+//            Log.d("aaa","Radi baki: ${workoutPlan.workoutName}")
+//        }
+//    }
 
     private fun testValues(){
         var plan1 = WorkoutPlan()
