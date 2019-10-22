@@ -20,6 +20,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:text="19"
+                    android:textColor="@color/blue_letter"
                     android:textSize="50sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -27,6 +28,7 @@
             <TextView
                     android:id="@+id/event_month"
                     android:text="June"
+                    android:textColor="@color/blue_letter"
                     android:layout_marginLeft="5dp"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -41,6 +43,7 @@
                 android:layout_height="match_parent">
             
             <TextView
+                    android:textColor="@color/blue_letter"
                     android:id="@+id/event_name"
                     android:layout_marginTop="20dp"
                     android:text="GYM APPOINTMENT"
@@ -54,11 +57,12 @@
                     android:layout_height="wrap_content">
 
                 <ImageView
-                        android:background="@drawable/time"
+                        android:background="@drawable/time_blue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
                 <TextView
+                        android:textColor="@color/blue_letter"
                         android:id="@+id/even_hour_start"
                         android:layout_marginLeft="10dp"
                         android:text="08:00"
@@ -71,6 +75,7 @@
                         android:layout_height="wrap_content"/>
 
                 <TextView
+                        android:textColor="@color/blue_letter"
                         android:id="@+id/even_hour_end"
                         android:text="10:00"
                         android:layout_width="wrap_content"
@@ -84,11 +89,12 @@
                     android:layout_height="wrap_content">
 
                 <ImageView
-                        android:background="@drawable/location"
+                        android:background="@drawable/location_blue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
                 <TextView
+                        android:textColor="@color/blue_letter"
                         android:id="@+id/even_location"
                         android:layout_marginLeft="10dp"
                         android:text="Play Fitness"
@@ -100,6 +106,7 @@
             </LinearLayout>
 
             <TextView
+                    android:textColor="@color/blue_letter"
                     android:id="@+id/even_comment"
                     android:text="Group training session 3 people"
                     android:layout_width="wrap_content"
@@ -111,8 +118,8 @@
     </LinearLayout>
 
     <View android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:background="@color/colorAccent"
+          android:layout_height="2dp"
+          android:background="@color/blue_letter"
           tools:layout_editor_absoluteY="150dp"
           tools:layout_editor_absoluteX="0dp"/>
 

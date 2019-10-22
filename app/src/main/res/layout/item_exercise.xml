@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" xmlns:layout="http://schemas.android.com/apk/res-auto"
-        android:background="#3b475b">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
             android:id="@+id/header"
             android:orientation="horizontal"
             android:layout_width="360dp"
@@ -29,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-            <android.support.v7.widget.AppCompatImageButton
+            <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/three_dots"
@@ -40,9 +38,10 @@
         </RelativeLayout>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <View
+            android:id="@+id/separator"
             android:layout_below="@id/header"
             android:layout_width="340dp"
             android:layout_centerHorizontal="true"
@@ -50,77 +49,22 @@
             android:elevation="100dp"
             android:background="@android:color/darker_gray"/>
 
-    <FrameLayout
-            android:id="@+id/set_container"
-            android:background="@color/white"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/header"
-            android:layout_width="360dp"
-            android:layout_height="50dp">
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_sets"
+            android:layout_below="@id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <include
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/header"
-                layout="@layout/item_sets_reps"
-                android:layout_height="50dp"
-                android:layout_width="360dp"/>
+    </android.support.v7.widget.RecyclerView>
 
-    </FrameLayout>
-
-
-    <View
-            android:id="@+id/set_separator2"
-            android:layout_below="@id/set_container"
-            android:layout_width="360dp"
-            android:layout_centerHorizontal="true"
-            android:layout_height="1dp"
-            android:elevation="100dp"
-            android:background="@android:color/darker_gray"/>
-
-    <FrameLayout
-            android:id="@+id/set_container2"
-            android:background="@color/white"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/set_separator2"
-            android:layout_width="360dp"
-            android:layout_height="50dp">
-
-        <include
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/header"
-                layout="@layout/item_sets_reps"
-                android:layout_height="50dp"
-                android:layout_width="360dp"/>
-
-    </FrameLayout>
-
-    <View
-            android:id="@+id/set_separator3"
-            android:layout_below="@id/set_container2"
-            android:layout_width="360dp"
-            android:layout_centerHorizontal="true"
-            android:layout_height="1dp"
-            android:elevation="100dp"
-            android:background="@android:color/darker_gray"/>
-
-    <FrameLayout
-            android:id="@+id/set_container3"
-            android:background="@color/white"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/set_separator3"
-            android:layout_width="360dp"
-            android:layout_height="50dp">
-
-        <include
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/header"
-                layout="@layout/item_sets_reps"
-                android:layout_height="50dp"
-                android:layout_width="360dp"/>
-
-    </FrameLayout>
-
-
+    <TextView
+            android:id="@+id/tv_add_set"
+            android:layout_below="@id/rv_sets"
+            android:text="+ Add new set"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>

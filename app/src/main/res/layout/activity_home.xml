@@ -103,7 +103,7 @@
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.762"
-                    android:id="@+id/textView4"/>
+                    android:id="@+id/tv_step_counter"/>
 
             <TextView
                     android:text="Steps"
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" android:layout_marginEnd="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_step_counter" android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toStartOf="@+id/view" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.6"
                     app:layout_constraintVertical_bias="0.006"/>
