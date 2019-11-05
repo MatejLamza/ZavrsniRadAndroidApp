@@ -1,4 +1,5 @@
 # ZavrsniRadAndroidApp
+//STILL IN DEVELOPMENT 
 This is final project for college assignment in form of Android application and my second personal project in Android.
 
 This App is used to track people healthy habbits such as their workouts, steps during day, their height, weight and other measurements, so they can
